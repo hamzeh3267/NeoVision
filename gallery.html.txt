@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery - NeoVision</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #0e0e10;
+      color: white;
+      padding: 1rem;
+    }
+    h1 {
+      text-align: center;
+      color: #9b5de5;
+      margin-bottom: 2rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      background-color: #2e2e33;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>AI Image Gallery (Demo)</h1>
+  <div class="gallery">
+"""
+for i in range(1, 51):
+    print(f'<img src="https://via.placeholder.com/300x200?text=AI+Image+{i}" alt="AI Image {i}" loading="lazy"/>')
+print("""  </div>
+</body>
+</html>
+""")
